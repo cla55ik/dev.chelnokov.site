@@ -7,6 +7,7 @@
     />
     <proj-list
         v-bind:projects="projects"
+        @remove="removeProject"
         
     />
 </template>
@@ -36,6 +37,9 @@ export default {
         createProject(project){
             this.projects.push(project) 
         },
+        removeProject(project){
+            this.projects = this.projects.filter( p => p.id !== project.id)
+        }
     },
     
 }

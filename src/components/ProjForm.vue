@@ -1,23 +1,25 @@
 <template>
     <form @submit.prevent> 
-        <input 
+        <custom-input 
             v-model="project.title"  
-            class="input" 
+            
             type="text" 
             placeholder="Название"
-        >
-        <input 
+        />
+        <custom-input 
             v-model="project.body" 
-            class="input" 
+            
             type="text" 
             placeholder="Описание"
-        >
-        <button @click="createProject">Create</button>
+        />
+        <custom-button @click="createProject">Create</custom-button>
     </form>
 </template>
 
 <script>
+
 export default {
+    
     data(){
         return{
             project:{

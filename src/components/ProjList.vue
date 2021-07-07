@@ -2,8 +2,12 @@
     <div>
         <h3>Projects</h3>
          <proj-item 
-            v-for="proj in projects" :key="proj.id"
-            v-bind:proj="proj"/>
+            v-for="proj in projects" 
+            :key="proj.id"
+            v-bind:proj="proj"
+            
+            @remove="$emit('remove', post)"
+            />
         
         
     </div>
