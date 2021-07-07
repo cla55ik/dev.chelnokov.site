@@ -6,7 +6,7 @@
             :key="proj.id"
             v-bind:proj="proj"
             
-            @remove="$emit('remove', post)"
+            @remove="$emit('remove', proj)"
             />
         
         
