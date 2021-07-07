@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="projects.length > 0"> 
         <h3>Projects</h3>
          <proj-item 
             v-for="proj in projects" 
@@ -10,6 +10,9 @@
             />
         
         
+    </div>
+    <div v-else>
+        <h2>Раздел не заполнен</h2>
     </div>
    
 </template>
