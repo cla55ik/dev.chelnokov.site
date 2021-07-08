@@ -5,7 +5,7 @@
                 title: {{proj.title}} 
             </div>
             <div>
-                body: {{proj.body}} 
+                id: {{proj.id}} 
             </div>
          </div>
          <div class="project-btns">
