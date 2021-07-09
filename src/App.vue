@@ -1,9 +1,7 @@
 <template>
     <div>
         Страница с проектами
-        <custom-button @click="fetchProject">
-            Загрузить проекты
-        </custom-button>
+       
         <custom-button
             @click="showModal"
         >
@@ -48,12 +46,33 @@ export default {
     },
 
     methods:{
-        createProject(project){
+        /*createProject(project){
             this.projects.push(project)
             this.modalVisible = false 
+        },*/
+
+        createProject(project){
+            console.log(project);
+            console.log(project.title);
+            axios.post('http://api.chelnokov.site/projects', {
+                title: project.title,
+                description: project.description,
+            })
+                .then(response => {})
+                .catch(e => {
+                    console.log(e);
+                });
+            
+            this.modalVisible = false;
         },
         removeProject(project){
-            this.projects = this.projects.filter( p => p.id !== project.id)
+            axios.delete('http://api.chelnokov.site/projects/' + project.id)
+            .then(response => {
+                this.projects.splice(project.id, 1)
+                console.log(this.result);
+            });
+
+           // this.fetchAllProjects();
         },
         showModal(){
             this.modalVisible = true;

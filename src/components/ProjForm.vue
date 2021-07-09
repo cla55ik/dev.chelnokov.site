@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent> 
+    <form @submit.prevent="createProject"> 
         <custom-input 
             v-model="project.title"  
             
@@ -7,12 +7,12 @@
             placeholder="Название"
         />
         <custom-input 
-            v-model="project.body" 
+            v-model="project.description" 
             
             type="text" 
             placeholder="Описание"
         />
-        <custom-button @click="createProject">Create</custom-button>
+        <custom-button >Create</custom-button>
     </form>
 </template>
 
@@ -24,16 +24,16 @@ export default {
         return{
             project:{
                 title:'',
-                body:'',
+                description:'',
             }
         }
     },
     methods:{
         createProject(){
-            this.project.id = Date.now();
+            //this.project.id = Date.now();
             this.$emit('create', this.project);
             this.project = {
-                body: '',
+                description: '',
                 title: ''
             }
              
