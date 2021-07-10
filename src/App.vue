@@ -1,7 +1,13 @@
 <template>
     <div>
         Страница с проектами
-       
+       <custom-button
+        @click="updateProject"
+       >
+
+
+       Обновить
+       </custom-button>
         <custom-button
             @click="showModal"
         >
@@ -27,11 +33,12 @@
 import ProjList from "@/components/ProjList"
 import ProjForm from '@/components/ProjForm';
 import axios from 'axios';
-import CustomButton from './components/UI/CustomButton.vue';
+
 
 export default {
     components: {
         ProjForm,ProjList
+    
     },
     data() {
         return{
@@ -54,7 +61,7 @@ export default {
         createProject(project){
             console.log(project);
             console.log(project.title);
-            axios.post('http://api.chelnokov.site/projects', {
+           const response = axios.post('http://api.chelnokov.site/projects', {
                 title: project.title,
                 description: project.description,
             })
@@ -62,7 +69,7 @@ export default {
                 .catch(e => {
                     console.log(e);
                 });
-            
+            console.log(response);
             this.modalVisible = false;
         },
         removeProject(project){
@@ -70,6 +77,14 @@ export default {
             .then(response => {
                 this.projects.splice(project.id, 1)
                 console.log(this.result);
+            });
+
+           // this.fetchAllProjects();
+        },
+        updateProject(project){
+            axios.patch('http://api.chelnokov.site/projects/' + project.id)
+            .then(response => {
+                
             });
 
            // this.fetchAllProjects();

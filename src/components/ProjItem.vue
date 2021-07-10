@@ -11,6 +11,9 @@
          <div class="project-btns">
              <custom-button @click="$emit('remove', proj)">Скрыть</custom-button>
          </div>
+         <div class="project-btns">
+             <custom-button @click="$emit('update', proj)">Обновить</custom-button>
+         </div>
         
     </div>
 </template>

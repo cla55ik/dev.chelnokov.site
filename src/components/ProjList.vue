@@ -7,6 +7,7 @@
             v-bind:proj="proj"
             
             @remove="$emit('remove', proj)"
+            @update="$emit('update', proj)"
             />
         
         
