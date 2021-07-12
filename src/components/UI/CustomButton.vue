@@ -12,14 +12,19 @@ export default {
 </script>
 
 <style scoped>
+
     .custom{
-        padding: 10px 25px;
-        font-size: 18px;
-        font-weight: 600;
-        color: #1A1D23;
-        background-color: transparent;
-        border-radius: 0px;
-        border: 1px solid #1A1D23 ;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        border: none;
+        padding: 15px 35px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #fff;
+        background: #447AFE;
+        
         
     }
 
