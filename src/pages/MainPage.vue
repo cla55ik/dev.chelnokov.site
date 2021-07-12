@@ -14,23 +14,46 @@
     </div>
    
   </div>
+  <div class="price">
+    <jumbotrone-light>
+      Стоимость
+    </jumbotrone-light>
+    <h2>
+      Сайт - это надёжная инвестиция,<br>если инвестировать куда надо
+    </h2>
+    <price-list
+      v-bind:prices="prices"
+    ></price-list>
+    
+  </div>
 </template>
 
 <script>
-  //import ProjList from "@/components/ProjList"
+  import PriceList from "@/components/PriceList"
   //import ProjForm from '@/components/ProjForm';
   import Header from '@/components/sections/Header'
+
 
 
   //import axios from 'axios';
 
 export default {
   components: {
-        Header
-    
-    
-    
+        Header, PriceList
+       
     },
+
+    data(){
+      return{
+        prices:[
+        {title:'Интернет-магазин', p:'50 000', description:'Разработка сайта с каталогом, корзиной, онлайн-оплатой и рассылкой информации об акциях'},   
+        {title:'Сайт компании', p:'30 000', description:'Разработка полноценного сайта, рассказывающего о Вашей компании, услугах и товарах'},
+        {title:'Лендинг', p:'15 000', description:'Разработка сайта-одностраничника, рассказывающего о конкретной услуги или товаре'}, 
+        ]
+      }
+
+    },
+    
 }
 </script>
 
@@ -51,12 +74,25 @@ export default {
     text-align: center;
   }
 
+  h2{
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
   p{
     margin-bottom: 30px;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+  }
+
+  .price{
+    text-align: center;
+    margin-top: 50px;
   }
 
 @media screen and (min-width:1200px) {
@@ -94,10 +130,23 @@ export default {
       text-align: left;
     }
 
+     h2{
+        font-size: 32px;
+        line-height: 37px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        
+      }
+
   p{
     margin-bottom: 25px;
     margin-right: 30%;
     text-align: left;
+  }
+
+  .price{
+    
+    margin-top: 90px;
   }
 
 }
