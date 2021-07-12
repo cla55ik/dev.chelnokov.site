@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .main, .price{
+  .main, .price, .project-list{
     margin: 0px 20px;
   }
 

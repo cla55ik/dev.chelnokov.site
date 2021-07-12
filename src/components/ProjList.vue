@@ -1,6 +1,6 @@
 <template>
-    <div v-if="projects.length > 0"> 
-        <h3>Projects</h3>
+    <div v-if="projects.length > 0" class="wrapper"> 
+        
          <proj-item 
             v-for="proj in projects" 
             :key="proj.id"
@@ -32,6 +32,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@media screen and (min-width:1200px) {
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
+}
 </style>
