@@ -19,7 +19,7 @@ export default {
         line-height: 16px;
         text-align: center;
 
-        color: #9A9A9C;
+        color: #fff;
 
         padding: 10px 20px;
     }

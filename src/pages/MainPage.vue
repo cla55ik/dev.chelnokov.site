@@ -1,6 +1,6 @@
 <template>
-  
-  <div class="main">
+  <div class="section">
+    <div class="main">
     <div class="cta-main">
          <jumbotrone-light>
             Эффективные сайты с любым функционалом.
@@ -14,6 +14,7 @@
     </div>
    
   </div>
+
   <div class="price">
     <jumbotrone-light>
       Стоимость
@@ -26,12 +27,46 @@
     ></price-list>
     
   </div>
+  </div>
+  
+  
+  
+  <div class="prjects full-width">
+    <div class="section">
+      <jumbotrone-dark>
+      Примеры наших сайтов.
+    </jumbotrone-dark>
+    <h2>К каждому сайту мы относимся <br>с особым вниманием</h2>
+    <div class="project-list">
+      <ProjectsView>
+        
+      </ProjectsView>
+    </div>
+    <custom-button @click="$router.push('/projects')">
+      Смотреть еще
+    </custom-button>
+    </div>
+    
+  </div>
+
+  <div class="advantages">
+
+  </div>
+
+  <div class="services">
+
+  </div>
+
+  <div class="footer">
+
+  </div>
 </template>
 
 <script>
   import PriceList from "@/components/PriceList"
-  //import ProjForm from '@/components/ProjForm';
+  import ProjectsView from '@/components/sections/ProjectsView';
   import Header from '@/components/sections/Header'
+
 
 
 
@@ -39,7 +74,8 @@
 
 export default {
   components: {
-        Header, PriceList
+        Header, PriceList, ProjectsView
+    
        
     },
 
@@ -58,6 +94,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .main, .price{
+    margin: 0px 20px;
+  }
+
+  .projects{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
   .main{
     text-align: center;
     margin-top:15px;
@@ -90,12 +135,42 @@ export default {
     text-align: center;
   }
 
+ 
+
   .price{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
   }
 
+
+  .prjects{
+    text-align: center;
+    padding-top:70px;
+    padding-bottom: 50px;
+    margin-top:60px;
+
+    background: #F0EDF6;
+  }
+
+  .projects h2{
+    margin-top:30px;
+    margin-bottom: 35px;
+  }
+
+  
+
 @media screen and (min-width:1200px) {
+
+    .main, .price{
+      margin: 0px 0px;
+    }
+
+  .projects{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
   .main{
     display: flex;
     margin-top:0;
@@ -147,6 +222,20 @@ export default {
   .price{
     
     margin-top: 90px;
+  }
+
+
+  
+  .prjects{
+    
+    padding-top:70px;
+    padding-bottom: 70px;
+    margin-top:50px;
+  }
+
+  .projects h2{
+    margin-top:30px;
+    margin-bottom: 60px;
   }
 
 }

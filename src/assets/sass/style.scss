@@ -4,3 +4,14 @@
 *{
     color: $primary-c;
 }
+
+.full-width{
+    width:100%;
+}
+
+@media screen and (min-width:1200px) {
+    .section{
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+}

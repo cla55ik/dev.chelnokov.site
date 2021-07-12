@@ -21,14 +21,14 @@ components:{
         box-sizing: border-box;
         font-family: 'RobotoCondensed';
   }    
-
+/*
   body{
       max-width: 1220px;
      
-      margin: 0 20px;
+      margin: 0 auto;
      
   }
-
+*/
   @media screen and (min-width:1200px) {
      *{
          margin:0;

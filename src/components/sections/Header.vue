@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper">
+<div class="section">
+<div class="wrapper">
     <div class="logo">
       <div class="img">
         <img src="@/assets/img/logo.svg" alt="IvanChelnokov">
@@ -12,6 +13,8 @@
       <a href="tel:+79102814760">+7 910 281 47 60</a>
     </div>
   </div>
+</div>
+  
 </template>
 
 <script>
@@ -83,7 +86,7 @@ export default {
 
     .wrapper{
       min-height: 70px;
-      padding: 60px 0px;
+      padding: 25px 0px 60px 0px;
       margin: 0;
     }
 

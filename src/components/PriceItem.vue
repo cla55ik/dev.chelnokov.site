@@ -60,6 +60,15 @@ export default {
     margin-bottom: 10px;
 }
 
+ .p::before{
+    content: "от ";
+  }
+
+.p::after{
+    content: " ₽";
+    color:#00D0E2;
+}
+  
 .desc{
     font-weight: normal;
     font-size: 16px;
