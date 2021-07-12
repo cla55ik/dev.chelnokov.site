@@ -24,7 +24,19 @@ components:{
 
   body{
       max-width: 1220px;
-      margin: 0 auto;
      
+      margin: 0 20px;
+     
+  }
+
+  @media screen and (min-width:1200px) {
+     *{
+         margin:0;
+        padding:0;
+     }
+
+     body{
+         margin: 0 auto;
+     }
   }
 </style>
