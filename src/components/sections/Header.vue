@@ -26,6 +26,14 @@ export default {
   .wrapper{
     display: flex;
     flex-wrap: wrap;
+    margin-top:30px;
+    margin-bottom: 30px;
+  }
+
+  .img{
+    width: 50px;
+    height: auto;
+    object-fit: contain;
   }
 
   .logo{
@@ -35,14 +43,26 @@ export default {
     justify-content: center;
   }
 
-  .phone{
-    text-align: center;
-    width: 100%;
+  .name{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 25px;
     
   }
 
+  .phone{
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
   a{
-    color: red;
+    color:$primary-c;
+    text-decoration: none;
   }
 
 
@@ -58,10 +78,18 @@ export default {
 
     .phone{
       text-align: right;
+      font-weight: 400;
     }
 
     .wrapper{
       min-height: 70px;
+      padding: 60px 0px;
+      margin: 0;
+    }
+
+    .phone{
+      margin: 0;
+      padding: 10px 0;
     }
     
   }
