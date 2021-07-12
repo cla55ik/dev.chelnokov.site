@@ -1,4 +1,7 @@
 <template>
+    <Header>
+
+    </Header>
     <div>
         Страница с проектами
        <custom-button
@@ -32,12 +35,13 @@
 
 import ProjList from "@/components/ProjList"
 import ProjForm from '@/components/ProjForm';
+import Header from '@/components/sections/Header'
 import axios from 'axios';
 
 
 export default {
     components: {
-        ProjForm,ProjList
+        ProjForm,ProjList, Header
     
     },
     data() {
@@ -117,10 +121,18 @@ export default {
 </script>
 
 <style>
+
+@import "~@/assets/sass/style.scss";
   *{
         margin:0;
         padding:0;
         box-sizing: border-box;
+        font-family: 'RobotoCondensed';
+  }
+
+  body{
+      max-width: 1220px;
+      margin: 0 auto;
   }
 
 </style>
