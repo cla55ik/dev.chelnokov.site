@@ -4,10 +4,14 @@ import CustomModal from "@/components/UI/CustomModal.vue";
 import JumbotroneLight from "@/components/UI/JumbotroneLight.vue";
 import JumbotroneDark from "@/components/UI/JumbotroneDark.vue";
 
+
+
 export default[
     CustomButton,
     CustomInput,
     CustomModal,
     JumbotroneLight,
-    JumbotroneDark
+    JumbotroneDark,
+    
+    
 ]

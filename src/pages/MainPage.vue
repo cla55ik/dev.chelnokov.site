@@ -49,8 +49,19 @@
     
   </div>
 
-  <div class="advantages">
+  <div class="advantages section">
+    <div class="advantages-title">
+      <jumbotrone-dark>
+        Сайт под ключ.
+      </jumbotrone-dark>
+      <h2>Особенности нашей работы</h2>
+    </div>
+    
+    <advantages-list
+      v-bind:advantages="advantages"
+    >
 
+    </advantages-list>
   </div>
 
   <div class="services">
@@ -66,6 +77,7 @@
   import PriceList from "@/components/PriceList"
   import ProjectsView from '@/components/sections/ProjectsView';
   import Header from '@/components/sections/Header'
+  import AdvantagesList from '@/components/sections/AdvantagesList'
 
 
 
@@ -74,7 +86,7 @@
 
 export default {
   components: {
-        Header, PriceList, ProjectsView
+        Header, PriceList, ProjectsView, AdvantagesList
     
        
     },
@@ -85,6 +97,14 @@ export default {
         {title:'Интернет-магазин', p:'50 000', description:'Разработка сайта с каталогом, корзиной, онлайн-оплатой и рассылкой информации об акциях'},   
         {title:'Сайт компании', p:'30 000', description:'Разработка полноценного сайта, рассказывающего о Вашей компании, услугах и товарах'},
         {title:'Лендинг', p:'15 000', description:'Разработка сайта-одностраничника, рассказывающего о конкретной услуги или товаре'}, 
+        ],
+        advantages:[
+          {title:'Официальный договор', description:'Заключаю официальный договор, в котором подробно описаны этапы и сроки разработки. Оплата на расчетный счет ИП, или как вам удобно'},
+          {title:'Быстрые сайты', description:'Создаю сайты с применением современных технологий, ориентированных на скорость и бесперебойность работы'},
+          {title:'Адаптивная верстка', description:'Делаю адаптивные сайты. Ваш сайт будет одинаково красив и удобен как на компьютере так и на мобильном'},
+          {title:'Тестирование проекта', description:'После завершения разработки я провожу тестирование и исправляю выявленные ошибки. Только после тестирования я отдаю проект заказчику'},
+          {title:'Кастомный функционал', description:'Подключу и настрою только те функции, которые нужны вам'},
+          {title:'Тестирование проекта', description:'После завершения разработки я провожу тестирование и исправляю выявленные ошибки. Только после тестирования я отдаю проект заказчику'},
         ]
       }
 
@@ -157,7 +177,13 @@ export default {
     margin-bottom: 35px;
   }
 
-  
+  .advantages{
+    padding: 50px 0;
+  }
+
+  .advantages-title{
+    text-align: center;
+  }
 
 @media screen and (min-width:1200px) {
 
@@ -236,6 +262,15 @@ export default {
   .projects h2{
     margin-top:30px;
     margin-bottom: 60px;
+  }
+
+  .advantages{
+    padding: 80px 70px;
+  }
+
+  .advantages-title h2{
+    margin-top: 30px;
+    margin-bottom: 55px;
   }
 
 }
