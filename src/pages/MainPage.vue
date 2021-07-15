@@ -65,7 +65,15 @@
   </div>
 
   <div class="services">
-
+      <div class="section">
+        <h2>Какие сайты я делаю</h2>
+      </div>
+      <div class="section">
+        <services-list
+        v-bind:services="services"
+        >
+        </services-list>
+      </div>
   </div>
 
   <div class="footer">
@@ -78,7 +86,7 @@
   import ProjectsView from '@/components/sections/ProjectsView';
   import Header from '@/components/sections/Header'
   import AdvantagesList from '@/components/sections/AdvantagesList'
-
+  import ServicesList from '@/components/sections/ServicesList'
 
 
 
@@ -86,7 +94,7 @@
 
 export default {
   components: {
-        Header, PriceList, ProjectsView, AdvantagesList
+        Header, PriceList, ProjectsView, AdvantagesList, ServicesList
     
        
     },
@@ -105,7 +113,16 @@ export default {
           {title:'Тестирование проекта', description:'После завершения разработки я провожу тестирование и исправляю выявленные ошибки. Только после тестирования я отдаю проект заказчику'},
           {title:'Кастомный функционал', description:'Подключу и настрою только те функции, которые нужны вам'},
           {title:'Тестирование проекта', description:'После завершения разработки я провожу тестирование и исправляю выявленные ошибки. Только после тестирования я отдаю проект заказчику'},
-        ]
+        ],
+        services:[
+          {title:'Сайт-визитка', description:'Такой сайт обычно содержит основную информацию об организации или частном лице, товарах или услугах, прейскуранты, контактные данные и адреса.', status:true},
+          {title:'Landing page', description:'Одностраничный сайт, который состоит из нескольких блоков и разрабатывается под конкретную услугу и товар, которые нужно продать.', status:true},
+          {title:'Сайт-каталог', description:'Он предназначается для ознакомления потенциальных клиентов с ассортиментом товаров из каталога, но этот сайт не продает: там отсутствует корзина для моментальной покупки в режиме онлайн', status:true},
+          {title:'Интернет-магазин', description:'Сайт такого вида обязательно должен содержать каталог с товарами, его подробным описанием, фотографиями и ценами, корзину, выбор «любимых» товаров, систему онлайн-оплаты, часто личный кабинет. ', status:true},
+          {title:'Корпоративный сайт', description:'Качественная и полноценная презентация компании в Интернете. Основная цель — привлечь не только новых клиентов, но и партнеров.', status:true},
+          {title:'Веб-сервис', description:'Может быть чем угодно: от новстного портала до CRM-системы организации. Функционал определяется исходя из ваших целей и задач.', status:true},
+          {title:'Информационный сайт', description:'На нем можно найти всю необходимую информацию, касающуюся темы или компании, которой он посвящен. ',status:false}
+        ],
       }
 
     },
