@@ -68,7 +68,7 @@
       <div class="section">
         <h2>Какие сайты я делаю</h2>
       </div>
-      <div class="section">
+      <div class="section services-list">
         <services-list
         v-bind:services="services"
         >
@@ -202,6 +202,10 @@ export default {
     text-align: center;
   }
 
+  .services{
+    padding-bottom: 50px;
+  }
+
 @media screen and (min-width:1200px) {
 
     .main, .price{
@@ -288,6 +292,12 @@ export default {
   .advantages-title h2{
     margin-top: 30px;
     margin-bottom: 55px;
+  }
+
+  .services{
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-image: url("../assets/img/services-back.jpg");
   }
 
 }
