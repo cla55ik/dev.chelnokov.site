@@ -1,7 +1,7 @@
 <template>
-  <span class="wrapper">
+  <div class="wrapper">
       <slot></slot>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
         font-size: 14px;
         line-height: 16px;
         text-align: center;
-
+         display: inline-block;
         color: #fff;
 
         padding: 10px 20px;
@@ -26,6 +26,7 @@ export default {
 
     @media screen and (min-width:1200px) {
         .wrapper{
+           
             font-size: 16px;
             line-height: 19px;
         }

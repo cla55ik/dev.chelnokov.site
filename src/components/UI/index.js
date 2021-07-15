@@ -3,7 +3,8 @@ import CustomInput from "@/components/UI/CustomInput.vue";
 import CustomModal from "@/components/UI/CustomModal.vue";
 import JumbotroneLight from "@/components/UI/JumbotroneLight.vue";
 import JumbotroneDark from "@/components/UI/JumbotroneDark.vue";
-
+import InputText from "@/components/UI/InputText.vue";
+import InputArea from "@/components/UI/InputArea.vue";
 
 
 export default[
@@ -12,6 +13,9 @@ export default[
     CustomModal,
     JumbotroneLight,
     JumbotroneDark,
+    InputText,
+    InputArea
+
     
     
 ]

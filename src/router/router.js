@@ -1,5 +1,5 @@
 import MainPage from '@/pages/MainPage'
-import Projects from '@/pages/Projects'
+import ProjectsList from '@/pages/ProjectsList'
 import { createWebHistory, createRouter } from 'vue-router'
 //import { createRouter } = require("vue-router")
 
@@ -10,7 +10,7 @@ const routes = [
     },
     {
         path: '/projects',
-        component: Projects
+        component: ProjectsList
     }
 ]
 
