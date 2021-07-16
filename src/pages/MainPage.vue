@@ -5,6 +5,7 @@
          <jumbotrone-light>
             Эффективные сайты с любым функционалом.
           </jumbotrone-light>
+          <a href="/testform">TEST FORM</a>
           <h1>Разработка сайтов и&nbsp;онлайн-сервисов</h1>
           <p>Ваш сайт будет соответствовать всем требованиям для&nbsp;дальнейших маркетинговых&nbsp;работ</p>
           <custom-button>Рассчитать стоимость</custom-button>
