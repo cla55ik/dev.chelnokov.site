@@ -1,11 +1,18 @@
 <template>
-  <textarea class="input-text" rows="4"></textarea>
+  <textarea class="input-text" v-bind:value="modelValue" @input="updateInput" rows="4"></textarea>
 </template>
 
 <script>
 export default {
     name:'input-area',
-
+    props:{
+        modelValue:[String, Number]
+    },
+    methods:{
+        updateInput(event){
+            this.$emit('update:modelValue', event.target.value)
+        }
+    }
 
 }
 </script>

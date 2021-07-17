@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <form @submit.prevent="sendForm3">
+        <form @submit.prevent="sendForm">
             <div class="form-inner">
                 <div class="form-col">
                     <input-text
@@ -18,8 +18,11 @@
                     <custom-button class="btn-form-desktop">
                         Отправить
                     </custom-button>
-                    <div v-for="(err, index) in error" :key="index">
-                        {{err[index]}}
+                    <div>
+                        {{error}}
+                    </div>
+                    <div v-show="respost">
+                        {{ respost }}
                     </div>
                 </div>
                 <div class="form-col">
@@ -60,68 +63,51 @@ export default {
                 sitetype:'',
                 description:'',
             },
-            error:[],
-            respost:[],
+            error:'',
+            respost:'',
         }
        
     },
      methods:{
-        sendForm3(){
-            const article = ['sendform'];
-            axios.post(`http://api.chelnokov.site`, article)
-                .then(response => {
-                    this.respost = response.data;
-                    console.log(response);
-                    console.log(typeof article);
-                    })
-                .catch(error => {
-                    this.error = error.message;
-                    alert(this.error)
-                })
-
-        },
-        sendForm2(){
-            const str = JSON.stringify(this.formDetail);
-            console.log('btnclick');
-            let data = {type: 'send'}
-            let string = JSON.stringify(data)
-
-            console.log(string);
-            console.log(data);
-
-            let obj = this.formDetail
-            const resultArray = Object.keys(obj).map(function(key) {
-            return [Number(key), obj[key]];
-            });
-            //console.log(resultArray);
-            axios.post(`http://api.chelnokov.site`,{
-                body:JSON.stringify(data)
-            })
-            .then(response=>{
-                this.respost = response.data
-                console.log('response = ' + response);
-                console.log('this.formDetail = ' + this.formDetail.type);
-            })
-            .catch(e => {
-                this.error.push(e)
-            })
-        },
-        async sendForm() {
-            try{
-                //const str = JSON.stringify(this.formDetail);
-                //const str2 = this.formDetail;
-                const response = await axios.post('http://api.chelnokov.site',{
-                    body:this.formDetail
-                })
-                console.log('formDetail str = ' + str);
-                console.log(`Server response = ${response.data}`);
-                this.respost = response;
-                console.log(`Server say = ${this.respost}`);
-            } catch(e){
-                    alert('POST error');
+            sendForm(){
+                let data = this.formDetail;
+                if(this.validateForm(data)){
+                    axios.post(`http://api.chelnokov.site`,data)
+                    .then(response => {
+                        this.respost = response.data.message
+                        this.clearForm();
+                        })
+                    .catch(error => this.error = error.message)
                 }
+                
+
+                    
+            },
+            validateForm(data){
+                if(data.phone == ''){
+                    this.respost = 'Заполните номер телефона'
+                    return false
+                }else if(!this.validatePhone(data.phone)){
+                    this.respost = 'Номер телефона некорректен'
+                    return false
+                }else{
+                    return true
+                }
+            },
+            validatePhone(phone){
+                if(phone == '888'){
+                    return true
+                }else{
+                    return false
+                }
+            },
+            clearForm(){
+                this.formDetail.name = '';
+                this.formDetail.phone ='';
+                this.formDetail.sitetype = '';
+                this.formDetail.description ='';
             }
-        }
+        },
     
     
 }
