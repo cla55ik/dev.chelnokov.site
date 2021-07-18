@@ -61,13 +61,14 @@ export default {
         },*/
 
         createProject(project){
+            let data = project
             console.log(project);
-            console.log(project.title);
-           const response = axios.post('http://api.chelnokov.site/projects', {
-                title: project.title,
-                description: project.description,
-            })
-                .then(response => {})
+            console.log('status = ' + project.status);
+            //console.log(project.title);
+           const response = axios.post('http://api.chelnokov.site/projects', data)
+                .then(response => {
+                    console.log(response);
+                })
                 .catch(e => {
                     console.log(e);
                 });

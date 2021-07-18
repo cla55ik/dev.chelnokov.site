@@ -2,6 +2,7 @@
     <div v-if="projects.length > 0" class="wrapper"> 
         
          <proj-item 
+            
             v-for="proj in projects" 
             :key="proj.id"
             v-bind:proj="proj"

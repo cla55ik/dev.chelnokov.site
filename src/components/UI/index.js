@@ -5,6 +5,7 @@ import JumbotroneLight from "@/components/UI/JumbotroneLight.vue";
 import JumbotroneDark from "@/components/UI/JumbotroneDark.vue";
 import InputText from "@/components/UI/InputText.vue";
 import InputArea from "@/components/UI/InputArea.vue";
+import AdminButton from "@/components/UI/AdminButton.vue";
 
 
 export default[
@@ -14,7 +15,8 @@ export default[
     JumbotroneLight,
     JumbotroneDark,
     InputText,
-    InputArea
+    InputArea,
+    AdminButton
 
     
     

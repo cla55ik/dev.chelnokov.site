@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" v-if="show === true" @click="hideModal">
+  <div class="modal" v-if="show === true" @click="hideModal" >
       <div class="modal-content" @click.stop>
           <slot></slot>
       </div>

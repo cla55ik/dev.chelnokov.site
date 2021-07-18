@@ -1,7 +1,7 @@
 <template>
-     <div class="project" >
+     <div class="project" v-show="proj.status == 1">
         <div class="img">
-            <img :src="require(`../assets/img/${proj.img}-min.jpg`)" alt="">
+            <img :src="require(`../assets/img/${proj.img}-min.jpg`)" alt="" v-show="proj.img">
         </div>
         <div class="title">
             <h3>{{ proj.title }}</h3>

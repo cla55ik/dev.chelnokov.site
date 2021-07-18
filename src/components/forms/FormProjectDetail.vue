@@ -4,13 +4,14 @@
             <div class="form-inner">
                 <div class="form-col">
                     <input-text
+                   
                         v-model="formDetail.name"
                         
                         placeholder="Имя"
                     >
                     </input-text>
                     <input-text
-                        v-model="formDetail.phone"
+                        v-model.number="formDetail.phone"
                         
                         placeholder="Телефон"
                     >

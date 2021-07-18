@@ -11,7 +11,7 @@
             <div class="content">
                 <div class="form-wrapper">
                     <FormProjectDetail
-                        v-model="projectdetailform"
+                        
                     >
                     </FormProjectDetail>
                 </div>
