@@ -1,7 +1,7 @@
 import MainPage from '@/pages/MainPage'
 import ProjectsList from '@/pages/ProjectsList'
-import Admin from '@/pages/Admin'
-import AdminProjects from '@/pages/AdminProjects'
+import Admin from '@/pages/admin/Admin'
+import AdminProjects from '@/pages/admin/AdminProjects'
 
 import { createWebHistory, createRouter } from 'vue-router'
 //import { createRouter } = require("vue-router")
