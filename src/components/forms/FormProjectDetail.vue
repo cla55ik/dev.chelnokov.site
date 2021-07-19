@@ -73,7 +73,7 @@ export default {
             sendForm(){
                 let data = this.formDetail;
                 if(this.validateForm(data)){
-                    axios.post(`http://api.chelnokov.site`,data)
+                    axios.post(`http://api.chelnokov.site/sendform`,data)
                     .then(response => {
                         this.respost = response.data.message
                         this.clearForm();

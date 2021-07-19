@@ -3,7 +3,8 @@
 <div class="wrapper">
     <div class="logo">
       <div class="img">
-        <img src="@/assets/img/logo.svg" alt="IvanChelnokov">
+        <a href="/"><img src="@/assets/img/logo.svg" alt="IvanChelnokov"></a>
+        
       </div>
       <div class="name">
         Ivan Chelnokov
@@ -11,6 +12,7 @@
     </div>
     <div class="phone">
       <a href="tel:+79102814760">+7 910 281 47 60</a>
+    
     </div>
   </div>
 </div>

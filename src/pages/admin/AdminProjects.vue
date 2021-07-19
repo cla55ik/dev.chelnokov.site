@@ -57,7 +57,7 @@ export default {
             },
         createProject(project){
             let data = project;
-            axios.post('http://api.chelnokov.site', data)
+            axios.post('http://api.chelnokov.site/projects', data)
             .then(response=> {
                 console.log(response)
                 this.getAllProjects

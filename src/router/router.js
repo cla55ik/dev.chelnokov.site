@@ -2,6 +2,7 @@ import MainPage from '@/pages/MainPage'
 import ProjectsList from '@/pages/ProjectsList'
 import Admin from '@/pages/admin/Admin'
 import AdminProjects from '@/pages/admin/AdminProjects'
+import TestPage from '@/pages/TestPage'
 
 import { createWebHistory, createRouter } from 'vue-router'
 //import { createRouter } = require("vue-router")
@@ -22,6 +23,10 @@ const routes = [
     {
         path: '/ivan/projects',
         component: AdminProjects
+    },
+    {
+        path: '/test',
+        component: TestPage
     }
         
 

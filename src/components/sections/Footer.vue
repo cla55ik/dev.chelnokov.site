@@ -40,12 +40,16 @@
                             </div>
                         </div>
                         <div class="logo">
-                             <img src="@/assets/img/logo-footer.svg" alt="">
+                            
+                            <img src="@/assets/img/logo-footer.svg" alt="">
                         </div>
                     </div>
                 </div>
                 
             </div>
+        </div>
+        <div>
+            <button @click="$router.push('/ivan')">ivan</button>
         </div>
         
     </footer>
